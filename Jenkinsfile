@@ -9,7 +9,7 @@ agent any
 
 		}
 		
-		stage ( 'Build' )
+		stage ( 'Compile' )
 		{
 		steps { withMaven(jdk: 'localJDK', maven: 'localMaven') {
 			sh 'mvn compile'
@@ -18,5 +18,13 @@ agent any
 
 		}
 		
+		stage ( 'package' )
+		{
+		steps { withMaven(jdk: 'localJDK', maven: 'localMaven') {
+			sh 'mvn package'
+			} 
+			}
+
+		}
 	}
 }
