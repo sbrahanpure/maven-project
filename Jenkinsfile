@@ -6,8 +6,8 @@ agent any
 	stage ( 'SCM Integrate' )
 	{
 		steps {
-			{ git 'https://github.com/sbrahanpure/maven-project' }
-}
+			 git 'https://github.com/sbrahanpure/maven-project' }
+
 }
 }
 }
